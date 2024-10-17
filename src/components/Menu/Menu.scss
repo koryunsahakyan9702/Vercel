@@ -1,0 +1,116 @@
+.Menu{
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    gap:2rem;
+    position: relative;
+    z-index: 2;
+    .icons_menu{
+        display: flex;
+        flex-direction: column;
+        width: 2%;
+        gap: 0.5rem;
+        padding: 8.5rem 0 0 0;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        margin-left: 2%;
+        &.full{
+            position: absolute;
+            z-index: 3;
+            gap: 2rem;
+            height: 100vh;
+            background: linear-gradient(to bottom right, black 30%, transparent 100%);
+            width: 20%;
+            height: 120vh;
+            border-radius: 30%;
+            transition: all ease 1s;
+            .icon{
+                display: flex;
+                align-items: center;
+                min-height: 3rem;
+                gap:4rem;
+                border-radius: 50%;
+                padding: 0 1rem;
+                width: 100%;
+    
+    
+                &.active{
+                    width: 70%;
+                    background-color:#4682B4;
+                    border-radius: 5px;
+                }}
+        }
+        .icon{
+            display: flex;
+            align-items: center;
+            min-height: 3rem;
+            gap:4rem;
+            border-radius: 50%;
+            padding: 0 1rem;
+            width: 100%;
+
+
+            &.active{
+                width: 70%;
+                background-color: #3c89c8;
+                border-radius: 50%;
+                @media (max-width:900px) {
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 0 1.2rem 0 0.7rem;
+                }
+            }
+            
+            .menu_view{
+                position: relative;
+                left:0;
+                z-index: 3;
+                font-weight: 500;
+                font-size: 1.2rem;
+                opacity: 0.8;
+                transition: all ease 1s;
+                white-space: nowrap;
+                text-align: left;
+                cursor: pointer;
+                @media (max-width:900px) {
+                    display: none;
+                }
+
+            }
+            .menu_none{
+                position: relative;
+                z-index: 3;
+                left: -200px;
+                opacity: 0;
+                transition: all ease 1s;
+
+            }
+            img{
+                width: 1.2rem;
+                height: 1.2rem;
+                min-width: 1.2rem;
+                min-height: 1.2rem;
+                max-width: 1.2rem;
+                cursor: pointer;
+                max-height: 1.2rem;
+            }
+        }
+        .options{
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+            gap:1rem;
+            span{
+                font-size: 1rem;
+                color:#808080;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+                cursor: pointer;
+                opacity: 1;
+                transition: opacity ease 1s;
+            }
+        }
+    }
+}
